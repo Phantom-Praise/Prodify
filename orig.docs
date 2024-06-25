@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodify</title>
+    <link href="style3.css" rel="stylesheet" type="text/css">
+    <script src="script 2.js"></script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html">Prodify</a></div>
+            <ul>
+                <li><a href="Questionaire.html">Questionaire</a></li>
+                <li><a href="Journey.html">Journey</a></li>
+                <li><a href="Pathway.html">Pathway</a></li>
+                <li><a href="#">Programming</a></li>
+                <button><a href="#">SignIn</a></button>
+                <button><a href="#">SignUp</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="decodedResponse"></div>
+    <script>
+        window.onload = function(){
+        var urlParams = new URLSearchParams(window.location.search);
+        var encodedResponse = urlParams.get('response');
+        var decodedResponse = decodeURIComponent(encodedResponse);
+        console.log(decodedResponse)
+        responseJSON = JSON.parse(decodedResponse);
+
+        var decodedResponseDiv = document.getElementById('decodedResponse');
+
+        decodedResponseDiv.innerHTML = decodedResponse;
+        }
+    </script>
+
+    <!-- <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const response = urlParams.get('response');
+            document.getElementById('response').innerText = response;
+        };
+    </script> -->
+
+    <section class="background-section">
+        <!-- Content of the background section goes here -->
+    </section>
+
+    
+    
+</body>
+</html>
+---journey.html 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodify</title>
+    <link href="style3.css" rel="stylesheet" type="text/css">
+    <script src="script2.js"></script> <!-- Corrected script src -->
+
+    <!-- Define the variable journeyData -->
+    <script>
+        var journeyData;
+    </script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html">Prodify</a></div>
+            <ul>
+                <li><a href="Questionaire.html">Questionaire</a></li>
+                <li><a href="Journey.html">Journey</a></li>
+                <li><a href="Pathway.html">Pathway</a></li>
+                <li><a href="#">Programming</a></li>
+                <button><a href="#">SignIn</a></button>
+                <button><a href="#">SignUp</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="decodedResponse"></div>
+    <script>
+        window.onload = function(){
+            var urlParams = new URLSearchParams(window.location.search);
+            var encodedResponse = urlParams.get('response');
+            var decodedResponse = decodeURIComponent(encodedResponse);
+            console.log(decodedResponse)
+            responseJSON = JSON.parse(decodedResponse);
+
+            // Assign the parsed JSON to journeyData variable
+            journeyData = responseJSON;
+
+            var decodedResponseDiv = document.getElementById('decodedResponse');
+
+            decodedResponseDiv.innerHTML = decodedResponse;
+        }
+    </script>
+
+    <!-- <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const response = urlParams.get('response');
+            document.getElementById('response').innerText = response;
+        };
+    </script> -->
+
+    <section class="background-section">
+        <!-- Content of the background section goes here -->
+    </section>
+
+</body>
+</html>

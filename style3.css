@@ -1,0 +1,59 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pixel', sans-serif; /* Use a pixel art font */
+    background-color: #f0f0f0; /* Specify your desired background color */
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    background: rgb(0, 0, 0);
+    font-family: calibri;
+    padding: 10px 20px; /* Increased padding for better spacing */
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Remove underline */
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+li {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%; /* Adjust as needed */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.background-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

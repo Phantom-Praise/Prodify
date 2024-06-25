@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodify</title>
+    <link href="style3.css" rel="stylesheet" type="text/css">
+    <script src="script 2.js"></script> <!-- Corrected script src -->
+
+    <!-- Define the variable journeyData -->
+    <script>
+        var journeyData;
+    </script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html">Prodify</a></div>
+            <ul>
+                <li><a href="Questionaire.html">Questionnaire</a></li>
+                <li><a href="Pathway.html">Pathway</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="Community.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="decodedResponse"></div>
+    <script>
+        window.onload = function(){
+            var urlParams = new URLSearchParams(window.location.search);
+            var encodedResponse = urlParams.get('response');
+            var decodedResponse = decodeURIComponent(encodedResponse);
+            console.log(decodedResponse);
+
+            var decodedResponseDiv = document.getElementById('decodedResponse');
+            var formattedResponse = '<ul>'; // Start unordered list
+
+            // Split response into individual options
+            var options = decodedResponse.split('.');
+
+            // Iterate through each option and create list item
+            options.forEach(function(option) {
+                formattedResponse += '<li>' + option.trim() + '.</li>'; // Add list item
+            });
+
+            formattedResponse += '</ul>'; // End unordered list
+
+            decodedResponseDiv.innerHTML = formattedResponse;
+        }
+    </script>
+
+    <section class="background-section">
+        <!-- Content of the background section goes here -->
+    </section>
+
+</body>
+</html>

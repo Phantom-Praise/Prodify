@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="style7.css" rel="stylesheet" type="text/css">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html">Prodify</a></div>
+            <ul>
+                <li><a href="Questionaire.html">Questionnaire</a></li>
+                <li><a href="Pathway.html">Pathway</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="Community.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <center><h1>Please Enter The Field you Want To Pursue</h1></center>
+    <div class="container">
+        <input type="text" class="input type" id="textbox1" placeholder="e.g. Software Engineering...">
+        <input type ="Submit" onclick="getPathway()">
+    </div>
+
+    <div id="gptPathway"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function getPathway(){
+            var inputText = document.getElementById('textbox1').value;
+            var jsonAnswers = JSON.stringify({inputText });
+            console.log(inputText);
+
+            $.ajax({
+                url: 'http://localhost:3000/get-gptPathway',
+                type: 'POST',
+                contentType: 'application/json',
+                data: jsonAnswers, 
+                success: function(response) {
+                    console.log(response);
+                    $("#gptPathway").text(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error: " + status + " " + error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

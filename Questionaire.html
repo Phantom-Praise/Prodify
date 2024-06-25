@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodify</title>
+    <link href="style2.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html">Prodify</a></div>
+            <ul>
+                <li><a href="Questionaire.html">Questionnaire</a></li>
+                <li><a href="Pathway.html">Pathway</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="Community.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="background-section">
+        <div class="question-section active" id="question1">
+            <h2>What kind of person of are you; Are you drawn more towards the creative aspects of computer science, such as software development and design, or the analytical aspects, such as data analysis and algorithms?</h2>
+            <input type="text" placeholder="e.g creative, brains.....">
+            <button class="next-button" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question-section" id="question2">
+            <h2>Aside from computer science, what other career paths or industries do you find appealing? </h2>
+            <input type="text" placeholder="e.g law,health..">
+            <button class="next-button" onclick="nextQuestion()">Next</button>
+            <button class="prev-button" onclick="prevQuestion()">Previous</button>
+        </div>
+        <div class="question-section" id="question3">
+            <h2>What outside interests or skills do you possess that could complement your computer science studies?</h2>
+            <input type="text" placeholder="eg. writing..">
+            <button class="next-button" onclick="nextQuestion()">Next</button>
+            <button class="prev-button" onclick="prevQuestion()">Previous</button>
+        </div>
+        <div class="question-section" id="question4">
+            <h2>What is something you care about or you are passionate about, or you are curious about ?</h2>
+            <input type="text" placeholder="e.g helping people">
+            <button class="submit-button" onclick="submitForm()">Submit</button>
+            <button class="prev-button" onclick="prevQuestion()">Previous</button>
+        </div>
+    </section>
+
+    <script src="script 2.js"></script>
+</body>
+</html>

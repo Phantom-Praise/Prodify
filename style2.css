@@ -1,0 +1,95 @@
+*{
+    text-decoration: none;
+}
+.navbar{
+    background: rgb(0, 0, 0); font-family: calibri; padding-right: 15px;padding-left: 15px;
+}
+.navdiv{
+    display: flex; align-items: center; justify-content: space-between;
+}
+.logo a{
+    font-size: 35px; font-weight: 600; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif
+}
+li{
+    list-style: none; display: inline-block;
+}
+li a{
+    color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+    background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width:
+        90px;
+}
+button a{
+    color: white; font-weight: Bold; font-size: 15px;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.background-section {
+    background-image: url('Desktop - 7.png');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets the height of the background section to full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Text color for better visibility on the background image */
+}
+
+.question-section {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    background-color: #2c4f63;
+    border-radius: 10px;
+    text-align: center;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.question-section.active {
+    display: block;
+}
+
+input[type="text"] {
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.next-button,
+.prev-button,
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.next-button:hover,
+.prev-button:hover,
+.submit-button:hover {
+    background-color: #777;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
